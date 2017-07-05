@@ -1,0 +1,29 @@
+{
+  "name": "js-tint",
+  "version": "0.0.1",
+  "description": "a tool help to using javascript quickly",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "webpack": "^1.15.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js --display-error-details",
+    "uglify": "webpack --config ./webpack.uglify.config.js --display-error-details",
+    "test-date": "babel ./test/date.test.js -o ./test/date.result.js & node ./test/date.result.js",
+    "test-object": "babel ./test/object.test.js -o ./test/object.result.js & node ./test/object.result.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dushao103500/jsTint.git"
+  },
+  "author": "dushao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dushao103500/js-tools/issues"
+  },
+  "homepage": "https://github.com/dushao103500/js-tools#readme"
+}
