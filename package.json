@@ -2,7 +2,7 @@
   "name": "js-tint",
   "version": "0.0.1",
   "description": "a tool help to using javascript quickly",
-  "main": "index.js",
+  "main": "jsTint.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.5.1",

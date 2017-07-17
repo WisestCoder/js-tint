@@ -1,6 +1,7 @@
 'use strict';
 
 var date = require('../lib/date.js');
+// var date = import('../lib/date.js');
 
 console.log(date);
 console.log('-------------------------------------------------------------');
