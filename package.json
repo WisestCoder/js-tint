@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "a tool help to using javascript quickly",
   "main": "jsTint.js",
-  "dependencies": {},
+  "dependencies": {
+    "chai": "^4.1.0"
+  },
   "devDependencies": {
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
@@ -13,8 +15,7 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js --display-error-details",
     "uglify": "webpack --config ./webpack.uglify.config.js --display-error-details",
-    "test-date": "babel ./test/date.test.js -o ./test/date.result.js & node ./test/date.result.js",
-    "test-object": "babel ./test/object.test.js -o ./test/object.result.js & node ./test/object.result.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

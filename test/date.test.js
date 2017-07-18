@@ -1,16 +1,17 @@
-var date = require('../lib/date.js')
-// var date = import('../lib/date.js');
+var expect = require('chai').expect;
+var assert = require("assert");
+var date = require('../lib/date.js');
 
-console.log(date);
-console.log('-------------------------------------------------------------');
+describe('日期函数的测试', function() {
+  it('格式为：YYYYMMDD', function() {
+    expect(date.YYYYMMDD()).to.be.equal('2017-07-18');
+  });
 
-console.log(date.YYYYMMDD());
-console.log(date.YYYYMMDD('--'));
-console.log('-------------------------------------------------------------');
+  it('格式为：YYYYMMDDHHmmss', function() {
+    expect(date.YYYYMMDDHHmmss()).to.be.not.equal('2017-07-18');
+  });
 
-console.log(date.YYYYMMDDHHmmss());
-console.log(date.YYYYMMDDHHmmss(new Date(), {dateSep: '--', timeSep: '::'}));
-console.log(date.YYYYMMDDHHmmss(1499261013994));
-console.log('-------------------------------------------------------------');
-
-console.log(date.timestamp());
+  it('timestamp', function() {
+    expect(date.timestamp()).to.be.equal(Math.round(Date.now() / 1000));
+  });
+});
