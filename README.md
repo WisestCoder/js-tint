@@ -1,6 +1,6 @@
 # [jsTint](https://github.com/dushao103500/js-tint)
 [![NPM version](https://img.shields.io/npm/v/js-tint.svg?style=flat)](https://npmjs.org/package/js-tint)
-[![Github All Releases](https://img.shields.io/github/downloads/dushao103500/js-tint/total.svg)]()
+[![npm](https://img.shields.io/npm/dt/js-tint.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/dushao103500/js-tint.svg?style=social&label=Star)]()
 [![GitHub forks](https://img.shields.io/github/forks/dushao103500/js-tint.svg?style=social&label=Fork)]()
 
