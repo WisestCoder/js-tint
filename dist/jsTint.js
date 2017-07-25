@@ -53,6 +53,14 @@
 	  _web: __webpack_require__(4),
 	  _fetch: __webpack_require__(5)
 	};
+	
+	console.log({
+	  _date: __webpack_require__(1),
+	  _object: __webpack_require__(2),
+	  _string: __webpack_require__(3),
+	  _web: __webpack_require__(4),
+	  _fetch: __webpack_require__(5)
+	});
 
 /***/ }),
 /* 1 */

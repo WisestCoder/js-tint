@@ -1,1 +1,1 @@
-module.export = require('./dist/jsTint.js');
+module.exports = require('./dist/jsTint.js');
