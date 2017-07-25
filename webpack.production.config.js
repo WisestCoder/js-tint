@@ -1,13 +1,11 @@
 var webpack = require("webpack");
 
 module.exports = {
-  devtool: 'source-map',
-  entry: './lib/jsTint.js',
+  entry: './dist/jsTint.js',
 
   output: {
-    filename: 'jsTint.js',
-    path: __dirname + '/dist',
-    devtool: 'source-map'
+    filename: 'jsTint.production.js',
+    path: __dirname + '/dist'
   },
 
   module: {

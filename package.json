@@ -9,12 +9,12 @@
   "devDependencies": {
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
-    "babel-preset-es2015": "^6.5.0",
-    "webpack": "^1.15.0"
+    "babel-preset-es2015": "^6.5.0"
   },
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --display-error-details",
-    "uglify": "webpack --config ./webpack.uglify.config.js --display-error-details",
+    "copy": "node zz_copy.config.js",
+    "build": "webpack --config webpack.production.config",
+    "uglify": "uglifyjs dist/jsTint.js -o dist/jsTint.min.js",
     "test": "mocha"
   },
   "repository": {
