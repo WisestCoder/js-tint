@@ -47,11 +47,11 @@
 	'use strict';
 	
 	module.exports = {
-	  date: __webpack_require__(1),
-	  object: __webpack_require__(2),
-	  string: __webpack_require__(3),
-	  web: __webpack_require__(4),
-	  fetch: __webpack_require__(5)
+	  _date: __webpack_require__(1),
+	  _object: __webpack_require__(2),
+	  _string: __webpack_require__(3),
+	  _web: __webpack_require__(4),
+	  _fetch: __webpack_require__(5)
 	};
 
 /***/ }),
@@ -213,6 +213,17 @@
 	    }
 	    return result.join('');
 	  };
+	
+	  exports.addSpaceStr = function (total, str) {
+	    var str = str || "";
+	    var spaceStr = '';
+	    var len = total - str.length;
+	    while (len) {
+	      spaceStr += ' ';
+	      len--;
+	    }
+	    return spaceStr;
+	  };
 	}).call(undefined);
 
 /***/ }),
@@ -223,9 +234,15 @@
 	
 	(function () {
 	
-	  exports.getQueryString = function (key) {
+	  exports.getQueryString = function (key, url) {
+	    var rUrl;
+	    if (url) {
+	      rUrl = url;
+	    } else {
+	      rUrl = window.location.search.substr(1);
+	    }
 	    var reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i');
-	    var r = window.location.search.substr(1).match(reg);
+	    var r = rUrl.match(reg);
 	    if (r != null) {
 	      return unescape(r[2]);
 	    }
@@ -346,7 +363,7 @@
 	    });
 	  }
 	
-	  var fetch = function fetch(url, options) {
+	  exports.fetch = function (url, options) {
 	    var options = handleOptions(options);
 	    if (url == 'jsonp') {
 	      jsonp(url, options);
