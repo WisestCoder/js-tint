@@ -31,7 +31,7 @@ const { _date, _object, _string, _web, _fetch } = jsTint;
 
 - _date
 
-```bash
+```javascript
 console.log(_date.YYYYMMDD());   =>   
 console.log(_date.YYYYMMDD('-'));   =>   
 console.log(_date.YYYYMMDD(new Date(), '-'))   =>   
@@ -42,16 +42,22 @@ console.log(_date.YYYYMMDDHHmmss(new Date(), {dateSep: '-', timeSep: ':'}));   =
 console.log(_date.timestamp());   =>   
 ```
 
+- _number
+
+```javascript
+console.log(_number.tofixed(2.3251, 2));   =>   2.33   
+```
+
 - _object
 
-```bash
+```javascript
 console.log(_object.has({a: 1, b: 2}, 'a'));   =>   true
 console.log(_object.deepCopy({a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}));   =>   {a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}
 ```
 
 - _string
 
-```bash
+```javascript
 console.log(_string.randomString());   =>   STUVWXYZabcdefgh
 console.log(_string.randomString(10));   =>   STUYZabcfg
 console.log(_string.randomString(3, 'STUVWXYZ'));   =>   SWX
@@ -59,14 +65,14 @@ console.log(_string.randomString(3, 'STUVWXYZ'));   =>   SWX
 
 - _web
 
-```bash
+```javascript
 console.log(_web.getQueryString('name'));   =>   dushao103500
 console.log(_web.getQueryString('name', 'http://www.baidu.com?name=dushao&password=12345'));   =>   dushao
 ```
 
 - _fetch
 
-```bash
+```javascript
 _fetch('http://abc.json', { method: 'get', params: { name: 'dushao' } })
   .then(function(response) { return response.json(); })
   .then( function(value) { console.log(value); })
