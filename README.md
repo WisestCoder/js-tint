@@ -32,14 +32,15 @@ const { _date, _object, _string, _web, _fetch } = jsTint;
 - _date
 
 ```javascript
-console.log(_date.YYYYMMDD());   =>   
-console.log(_date.YYYYMMDD('-'));   =>   
-console.log(_date.YYYYMMDD(new Date(), '-'))   =>   
+console.log(_date.YYYYMMDD());   =>   2017-08-01
+console.log(_date.YYYYMMDD('/'));   =>   2017/08/01
+console.log(_date.YYYYMMDD(new Date(), '-'))   =>   2017-08-01
+console.log(_date.YYYYMMDD(1501568433291, '-'))   =>   2017-08-01
 
-console.log(_date.YYYYMMDDHHmmss());   =>   
-console.log(_date.YYYYMMDDHHmmss(new Date(), {dateSep: '-', timeSep: ':'}));   =>   
+console.log(_date.YYYYMMDDHHmmss());   =>   2017-08-01 14:21:23
+console.log(_date.YYYYMMDDHHmmss(new Date(), {dateSep: '/', timeSep: '/'}));   =>   2017/08/01 14/21/23
 
-console.log(_date.timestamp());   =>   
+console.log(_date.timestamp());   =>   1501568586
 ```
 
 - _number
@@ -51,6 +52,7 @@ console.log(_number.tofixed(2.3251, 2));   =>   2.33
 - _object
 
 ```javascript
+console.log(_object.isObject({a: 1, b: 2}));   =>   true
 console.log(_object.has({a: 1, b: 2}, 'a'));   =>   true
 console.log(_object.deepCopy({a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}));   =>   {a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}
 ```
@@ -58,6 +60,10 @@ console.log(_object.deepCopy({a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}));   =>   {a:
 - _string
 
 ```javascript
+console.log(_string.isString('dsadas'))   =>   true
+console.log(_string.isEmail('dushao1314@foxmail.com'))   =>   true
+console.log(_string.isMobile('18170860810'))   =>   true
+console.log(_string.isChinese('杜少小丢丢'))   =>   true
 console.log(_string.randomString());   =>   STUVWXYZabcdefgh
 console.log(_string.randomString(10));   =>   STUYZabcfg
 console.log(_string.randomString(3, 'STUVWXYZ'));   =>   SWX

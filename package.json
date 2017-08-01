@@ -12,8 +12,7 @@
     "babel-preset-es2015": "^6.5.0"
   },
   "scripts": {
-    "copy": "node zz_copy.config.js",
-    "build": "webpack --config webpack.production.config",
+    "build": "node zz_copy.config.js && webpack --config webpack.production.config",
     "uglify": "uglifyjs dist/jsTint.js -o dist/jsTint.min.js",
     "test": "mocha"
   },

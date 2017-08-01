@@ -211,6 +211,10 @@
 
 	(function () {
 
+	  exports.isObject = function (obj) {
+	    return Object.prototype.toString.call(obj) === '[object Object]';
+	  };
+
 	  exports.has = function (obj, prop) {
 	    return Object.prototype.hasOwnProperty.call(obj, prop);
 	  };
@@ -281,6 +285,25 @@
 	      len--;
 	    }
 	    return spaceStr;
+	  };
+
+	  exports.isString = function (s) {
+	    return Object.prototype.toString.call(s) === '[object String]';
+	  };
+
+	  exports.isEmail = function (value) {
+	    return (/^[-_A-Za-z0-9.]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]+$/.test(value)
+	    );
+	  };
+
+	  exports.isMobile = function (value) {
+	    return (/^[1][0-9]{10}$/.test(value)
+	    );
+	  };
+
+	  exports.isChinese = function (value) {
+	    return (/^[\u4e00-\u9fa5]+$/.test(value)
+	    );
 	  };
 	}).call(undefined);
 
