@@ -399,6 +399,7 @@
 
 	  function Response(responseText) {
 	    this.responseText = responseText;
+	    // 提供中间处理过程的方法
 	    this.json = function () {
 	      this.responseText = JSON.parse(this.responseText);
 	      return Promise.resolve(this.responseText);
@@ -407,6 +408,7 @@
 	      this.responseText = JSON.stringify(this.responseText);
 	      return Promise.resolve(this.responseText);
 	    };
+	    return Promise.resolve(this.responseText);
 	  }
 
 	  function getCallbackName(resolve) {
