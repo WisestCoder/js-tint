@@ -82,6 +82,4 @@ console.log(_web.getQueryString('name', 'http://www.baidu.com?name=dushao&passwo
 _fetch('http://abc.json', { method: 'get', params: { name: 'dushao' } })
   .then(function(response) { return response.json(); })
   .then( function(value) { console.log(value); })
-
-
 ```
