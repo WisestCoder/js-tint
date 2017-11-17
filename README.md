@@ -55,6 +55,7 @@ console.log(_number.tofixed(2.3251, 2));   =>   2.33
 console.log(_object.isObject({a: 1, b: 2}));   =>   true
 console.log(_object.has({a: 1, b: 2}, 'a'));   =>   true
 console.log(_object.deepCopy({a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}));   =>   {a: 1, b: 2, c: {d: 1}, e: [1, 2, 3]}
+console.log(_object.deepFormat({a: 1, b: '', c: {}, e: []}), { a: 100 });   =>   {a: 100, b: '', c: {}, e: []}
 ```
 
 - _string
@@ -83,3 +84,8 @@ _fetch('http://abc.json', { method: 'get', params: { name: 'dushao' } })
   .then(function(response) { return response.json(); })
   .then( function(value) { console.log(value); })
 ```
+
+## API
+1. When we use _fetch to send a ajax request, we should handle the 'Request Header';But at this stage, there is no such method to processing;
+2. ...
+
