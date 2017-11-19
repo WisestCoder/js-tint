@@ -85,7 +85,7 @@ _fetch('http://abc.json', { method: 'get', params: { name: 'dushao' } })
   .then( function(value) { console.log(value); })
 ```
 
-## API
+## TODO
 1. When we use _fetch to send a ajax request, we should handle the 'Request Header';But at this stage, there is no such method to processing;
 2. ...
 
